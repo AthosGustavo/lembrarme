@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notaActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activities.NotaActivity"
+    android:background="@drawable/card_view_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="18dp">
+
+       <TextView
+           android:id="@+id/titulo_nota"
+           android:singleLine="true"
+           android:ellipsize="marquee"
+           android:textColor="@color/design_default_color_primary_variant"
+           android:textSize="18sp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="16dp"
+           tools:text="Jogar o lixo"
+           />
+
+        <TextView
+            android:id="@+id/descricao_nota"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            tools:text="Jogar o lixo quando chegar do trabalho"
+            android:layout_below="@id/titulo_nota"
+            />
+
+        <TextView
+            android:id="@+id/data_nota"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            tools:text="20 mai"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
