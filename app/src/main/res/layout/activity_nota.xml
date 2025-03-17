@@ -1,57 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/notaActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nota_activity"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".Activities.NotaActivity"
-    android:background="@drawable/card_view_bg">
+    android:layout_height="match_parent"
+    tools:context=".Activities.NotaActivity">
 
-    <RelativeLayout
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/nota_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="18dp">
+        android:elevation="4dp"
+        android:title="@string/app_name"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/app_name"/>
 
-       <TextView
-           android:id="@+id/titulo_nota"
-           android:singleLine="true"
-           android:ellipsize="marquee"
-           android:textColor="@color/design_default_color_primary_variant"
-           android:textSize="18sp"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginStart="16dp"
-           tools:text="Jogar o lixo"
-           />
+    <ScrollView
+        android:id="@+id/activity_form_nota_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@id/nota_toolbar"
+        android:layout_above="@id/nota_adicionar_imagem">
 
-        <TextView
-            android:id="@+id/descricao_nota"
-            android:singleLine="true"
-            android:ellipsize="marquee"
-            android:textColor="@color/design_default_color_primary_variant"
-            android:textSize="16sp"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            tools:text="Jogar o lixo quando chegar do trabalho"
-            android:layout_below="@id/titulo_nota"
-            />
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/data_nota"
-            android:singleLine="true"
-            android:ellipsize="marquee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/design_default_color_primary_variant"
-            android:textSize="16sp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            tools:text="20 mai"/>
+            <!-- Imagem centralizada -->
+            <ImageView
+                android:id="@+id/activity_form_nota_imagem"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                tools:background="@tools:sample/backgrounds/scenic"/>
 
-    </RelativeLayout>
+            <!-- Campo de título -->
+            <EditText
+                android:id="@+id/nota_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="Título"
+                android:minHeight="48dp"
+                android:textSize="32sp"
+                android:layout_below="@id/activity_form_nota_imagem"
+                tools:text="@tools:sample/lorem[10]" />
 
-</androidx.cardview.widget.CardView>
+            <!-- Campo de descrição -->
+            <EditText
+                android:id="@+id/nota_descricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="Descrição"
+                android:minHeight="300dp"
+                android:textSize="16sp"
+                android:layout_below="@id/nota_titulo"
+                tools:text="@tools:sample/lorem[120]" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/nota_adicionar_imagem"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Adicionar imagem"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        tools:ignore="TouchTargetSizeCheck"
+        android:src="@drawable/nota_foto"/>
+
+</RelativeLayout>

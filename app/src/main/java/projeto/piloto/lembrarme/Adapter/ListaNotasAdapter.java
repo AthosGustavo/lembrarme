@@ -28,7 +28,7 @@ public class ListaNotasAdapter extends RecyclerView.Adapter<ListaNotasAdapter.Vi
   @Override
   public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
     LayoutInflater layoutInflater = LayoutInflater.from(this.context);
-    View view = layoutInflater.inflate(R.layout.activity_nota, parent, false);
+    View view = layoutInflater.inflate(R.layout.item_nota, parent, false);
     return new ViewHolder(view);
   }
 
@@ -56,7 +56,7 @@ public class ListaNotasAdapter extends RecyclerView.Adapter<ListaNotasAdapter.Vi
 
     public void vincula(Nota nota){
       this.titulo.setText(nota.getTitulo());
-      this.descNota.setText(nota.getDtNota().toString());
+      //this.descNota.setText(nota.getDtNota().toString());
       this.descNota.setText(nota.getDescNota());
     }
 

@@ -27,18 +27,16 @@ public class ListaNotasActivity extends AppCompatActivity {
     LembrarMeDb appDb = LembrarMeDb.getInstance(this);
     notaDao = appDb.notaDao();
 
+    configuraRecyclerView();
+
+  }
+
+  private void configuraRecyclerView(){
     RecyclerView recyclerView = activityListaNotasBinding.recyclerViewListaNotas;
     ListaNotasAdapter listaNotasAdapter = new ListaNotasAdapter(this,notaDao.getAll());
     recyclerView.setAdapter(listaNotasAdapter);
     recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
-
-
-
   }
-
-
 
 
 }

@@ -14,7 +14,7 @@ public class Nota {
   private String titulo;
   private String descNota;
   private String imgNota;
-  private Date dtNota;
+  //private Date dtNota;
 
   public Nota(String titulo, String descNota, String imgNota) {
     this.titulo = titulo;
@@ -50,15 +50,19 @@ public class Nota {
     this.titulo = titulo;
   }
 
-  public Date getDtNota() {
-    return dtNota;
-  }
+  //public Date getDtNota() {
+    //return dtNota;
+ // }
 
-  public void setDtNota(Date dtNota) {
-    this.dtNota = dtNota;
-  }
+  //public void setDtNota(Date dtNota) {
+    //this.dtNota = dtNota;
+  //}
 
   public Long getId() {
     return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
   }
 }
