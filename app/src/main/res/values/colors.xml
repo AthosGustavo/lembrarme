@@ -2,4 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="confirm_green">#006407</color>
+    <color name="close_red">#e20605</color>
+    <color name="background_gray">#dfddd0</color>
+    <color name="load_button_green">#6d8687</color>
+    <color name="primaryColor">#fbc02d</color>
+    <color name="primaryLightColor">#fff263</color>
+    <color name="primaryDarkColor">#c49000</color>
+    <color name="secondaryColor">#00e5ff</color>
+    <color name="secondaryLightColor">#6effff</color>
+    <color name="secondaryDarkColor">#00b2cc</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
+
 </resources>
