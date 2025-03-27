@@ -37,9 +37,10 @@
         android:background="@color/cardview_shadow_end_color"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/btn_fab"
-        android:src="@drawable/icon_add"
+        android:text="CRIAR NOTA"
+        app:icon="@drawable/lapis_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

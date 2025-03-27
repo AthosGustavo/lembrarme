@@ -14,8 +14,9 @@ import projeto.piloto.lembrarme.Model.Nota;
 @Database(entities = {Nota.class}, version = 1)
 public abstract class LembrarMeDb extends RoomDatabase {
 
-  private static LembrarMeDb lembrarMeDb;
   public abstract NotaDao notaDao();
+  private static LembrarMeDb lembrarMeDb;
+
 
   public static LembrarMeDb getInstance(Context context) {
     synchronized (LembrarMeDb.class) {
